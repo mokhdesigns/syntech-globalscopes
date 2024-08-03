@@ -9,13 +9,13 @@ You can install the package via Composer:
 ```bash
 composer require syntech/globalscopes
 
-```bash
+
 
 ## Configuration
 
 Publish the configuration file:
 
-```bash
+
 
 php artisan vendor:publish --provider="Syntech\GlobalScopes\GlobalScopesServiceProvider"
 
