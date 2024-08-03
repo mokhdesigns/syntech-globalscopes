@@ -16,10 +16,10 @@ composer require syntech/globalscopes
 Publish the configuration file:
 
 
-
+```bash
 php artisan vendor:publish --provider="Syntech\GlobalScopes\GlobalScopesServiceProvider"
 
-```bash
+
 
 This will create a globalscopes.php configuration file in the config directory of your Laravel application.
 
@@ -73,8 +73,7 @@ return [
     ],
 ];
 
-```php
-
+ 
 ## Usage
 
 Adding Global Scopes
