@@ -1,0 +1,31 @@
+
+{
+    "name": "syntech/globalscopes",
+    "description": "A Laravel package to add general model scopes to all models",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0",
+    "autoload": {
+        "psr-4": {
+            "Syntech\\GlobalScopes\\": "src/"
+        }
+    },
+    "minimum-stability": "RC",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "authors": [
+        {
+            "name": "syntech"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Syntech\\GlobalScopes\\GlobalScopesServiceProvider"
+            ]
+        }
+    }
+
+}
