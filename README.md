@@ -8,18 +8,18 @@ You can install the package via Composer:
 
 ```bash
 composer require syntech/globalscopes
+```
 
-```bash
 
 ## Configuration
 
 Publish the configuration file:
 
-```bash
 
+```bash
 php artisan vendor:publish --provider="Syntech\GlobalScopes\GlobalScopesServiceProvider"
+```
 
-```bash
 
 This will create a globalscopes.php configuration file in the config directory of your Laravel application.
 
@@ -72,9 +72,8 @@ return [
         'approved' => 'status = 1 AND approved = 1',
     ],
 ];
-
-```php
-
+```
+ 
 ## Usage
 
 Adding Global Scopes
@@ -85,5 +84,6 @@ Adding Global Attributes
 Global attributes can be accessed as if they are defined directly on the model:
 
 
-$customer = App\Models\Customer::find(1);
-echo $customer->image; // Uses the global attribute logic
+$customers = Customer::active()->get();
+
+return $customers; // Uses the global attribute logic
