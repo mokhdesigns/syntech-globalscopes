@@ -12,13 +12,17 @@ return [
     | functionality to all models.
     |
     | Example:
-    | 'approved' => function ($query) {
-    |     return $query->where('status', 1)->where('approved', 1);
+    | 'active' => function () {
+    |    return $this->where('status', 1);
     | },
     |
     */
 
-    'methods' => [],
+    'methods' => [
+        'active' => function () {
+            return $this->where('status', 1);
+        }
+    ],
 
     /*
     |--------------------------------------------------------------------------
