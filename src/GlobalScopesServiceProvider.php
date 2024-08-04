@@ -51,13 +51,13 @@ class GlobalScopesServiceProvider extends ServiceProvider
 
     protected function registerGlobalAttributes()
     {
-        $attributes = Config::get('globalscopes.attributes', []);
+        // $attributes = Config::get('globalscopes.attributes', []);
 
-        Model::booted(function ($model) use ($attributes) {
-            foreach ($attributes as $name => $callback) {
-                $model->addDynamicAttribute($name, $callback);
-            }
-        });
+        // Model::booted(function ($model) use ($attributes) {
+        //     foreach ($attributes as $name => $callback) {
+        //         $model->addDynamicAttribute($name, $callback);
+        //     }
+        // });
     }
 
 }
