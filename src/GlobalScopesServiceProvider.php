@@ -53,11 +53,12 @@ class GlobalScopesServiceProvider extends ServiceProvider
     {
         // $attributes = Config::get('globalscopes.attributes', []);
 
-        // Model::booted(function ($model) use ($attributes) {
+        // Model::addGlobalScope('globalAttributes', function (Builder $builder) use ($attributes) {
         //     foreach ($attributes as $name => $callback) {
-        //         $model->addDynamicAttribute($name, $callback);
+        //         $builder->addDynamicAttribute($name, $callback);
         //     }
         // });
     }
+    }
 
-}
+ 
