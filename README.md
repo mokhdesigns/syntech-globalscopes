@@ -10,19 +10,15 @@ You can install the package via Composer:
 composer require syntech/globalscopes
 ```
 
-
 ## Configuration
 
 Publish the configuration file:
-
 
 ```bash
 php artisan vendor:publish --provider="Syntech\GlobalScopes\GlobalScopesServiceProvider"
 ```
 
-
 This will create a globalscopes.php configuration file in the config directory of your Laravel application.
-
 
 ## Example Configuration
 
@@ -53,10 +49,10 @@ return [
                     // add more ...
             }
     ],
- 
+
 ];
 ```
- 
+
 ## Usage
 
 Adding Global Scopes
@@ -65,7 +61,6 @@ Once configured, the global scopes will automatically be applied to all Eloquent
 Adding Global Attributes
 
 Global attributes can be accessed as if they are defined directly on the model:
-
 
 $customers = Customer::active()->get();
 

@@ -3,7 +3,7 @@
     "description": "A Laravel package to add general model scopes to all models",
     "type": "library",
     "license": "MIT",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "autoload": {
         "psr-4": {
             "Syntech\\GlobalScopes\\": "src/"
