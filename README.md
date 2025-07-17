@@ -29,48 +29,31 @@ This will create a globalscopes.php configuration file in the config directory o
 ```php
 return [
 
-    /*
+       /*
     |--------------------------------------------------------------------------
     | Global Query Methods
     |--------------------------------------------------------------------------
     |
-    | Define global query methods for all Eloquent models.
+    | Define any global query methods that should be available across all
+    | Eloquent models. These methods can be used to add commonly used query
+    | functionality to all models.
+    |
+    | Example:
+    | 'active' => function () {
+    |    return $this->where('status', 1);
+    | },
     |
     */
 
     'methods' => [
-        'approved' => function ($query) {
-            return $query->where('status', 1)->where('approved', 1);
+        'active' => function () {
+            return $this->where('status', 1);
         },
+        'someMore' => function () {
+                    // add more ...
+            }
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Global Attributes
-    |--------------------------------------------------------------------------
-    |
-    | Define global attributes for all Eloquent models.
-    |
-    */
-
-    'attributes' => [
-        'image' => function ($value) {
-            return $value ? $value : asset('images/default.png');
-        },
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Global Scopes
-    |--------------------------------------------------------------------------
-    |
-    | Define global scopes to be applied to all Eloquent models.
-    |
-    */
-
-    'scopes' => [
-        'approved' => 'status = 1 AND approved = 1',
-    ],
+ 
 ];
 ```
  
